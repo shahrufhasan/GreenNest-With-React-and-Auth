@@ -1,8 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, use } from "react";
 import { Link } from "react-router";
 import logo from "../../public/logo.png";
+import { AuthContext } from "../Provider/AuthContex";
 
 const Navbar = () => {
+  const { user } = use(AuthContext);
+  const handleLogOut = () => {
+    console.log("trying log out");
+  };
+
+  // Naviagatins system starts from here
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Plants", path: "/plants" },
@@ -69,12 +76,42 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        <Link to="/auth/login" className="pr-2">
-          <a className="btn btn-outline btn-secondary">Login</a>
-        </Link>
-        <Link to="/auth/register" className="">
-          <a className="btn btn-outline btn-primary">Register</a>
-        </Link>
+        <div>{user && user.email}</div>
+        {user ? (
+          <div className="dropdown dropdown-hover mr-2">
+            <div tabIndex={0} role="button">
+              <div className="avatar">
+                <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
+                  <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
+                </div>
+              </div>
+            </div>
+            <ul
+              tabIndex="-1"
+              className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+            >
+              <li>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <a>Item 2</a>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link to="/auth/login" className="btn btn-outline btn-secondary mx-2">
+            Login
+          </Link>
+        )}
+        {user ? (
+          <button onClick={handleLogOut} className="btn">
+            LogOut
+          </button>
+        ) : (
+          <Link to="/auth/register" className="btn btn-outline btn-primary">
+            Register
+          </Link>
+        )}
       </div>
     </div>
   );

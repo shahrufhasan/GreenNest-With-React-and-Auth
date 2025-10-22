@@ -1,7 +1,28 @@
-import React from "react";
+import React, { use } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../Provider/AuthContex";
 
 const Register = () => {
+  const { createUser, setUser } = use(AuthContext);
+  const handleRegister = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const photo = form.photo.value;
+    const password = form.password.value;
+    console.log({ name, email, photo, password });
+
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        alert(errorCode);
+      });
+  };
   return (
     <div className="flex justify-center min-h-screen items-center">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5 space-y-3">
@@ -11,15 +32,16 @@ const Register = () => {
             Login to continue your green journey
           </p>
         </div>
-        <form action="" className="card-body">
+        <form onSubmit={handleRegister} className="card-body">
           <fieldset className="fieldset">
             {/* name */}
             <label className="label">Name</label>
             <input
-              name="text"
-              type="email"
+              name="name"
+              type="text"
               className="input"
               placeholder="Name"
+              required
             />
             {/* email */}
             <label className="label">Email</label>
@@ -28,14 +50,16 @@ const Register = () => {
               type="email"
               className="input"
               placeholder="Email"
+              required
             />
             {/* photo url */}
             <label className="label">Photo URL</label>
             <input
-              name="text"
-              type="email"
+              name="photo"
+              type="text"
               className="input"
               placeholder="Photo URl"
+              required
             />
             {/* password */}
             <label className="label">Password</label>
@@ -44,11 +68,15 @@ const Register = () => {
               type="password"
               className="input"
               placeholder="Password"
+              required
             />
             <div>
               <a className="link link-hover">Forgot password?</a>
             </div>
-            <button className="btn btn-primary mt-4">Register</button>
+            {/* Register Button */}
+            <button type="submit" className="btn btn-primary mt-4">
+              Register
+            </button>
             <div className="my-2 text-center">
               <p>OR CONTINUE WITH</p>
             </div>
