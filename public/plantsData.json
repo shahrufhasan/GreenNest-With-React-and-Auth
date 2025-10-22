@@ -1,6 +1,6 @@
 [
   {
-    "plantId": 1,
+    "id": 1,
     "plantName": "Snake Plant",
     "category": "Air Purifier",
     "price": 18,
@@ -12,7 +12,7 @@
     "providerName": "UrbanGreen Studio"
   },
   {
-    "plantId": 2,
+    "id": 2,
     "plantName": "Spider Plant",
     "category": "Air Purifier",
     "price": 15,
@@ -24,7 +24,7 @@
     "providerName": "GreenThumb Nursery"
   },
   {
-    "plantId": 3,
+    "id": 3,
     "plantName": "Peace Lily",
     "category": "Air Purifier",
     "price": 20,
@@ -36,7 +36,7 @@
     "providerName": "Bloom & Grow"
   },
   {
-    "plantId": 4,
+    "id": 4,
     "plantName": "Aloe Vera",
     "category": "Medicinal",
     "price": 12,
@@ -48,7 +48,7 @@
     "providerName": "Herb Haven"
   },
   {
-    "plantId": 5,
+    "id": 5,
     "plantName": "English Ivy",
     "category": "Air Purifier",
     "price": 10,
@@ -60,7 +60,7 @@
     "providerName": "Vine & Leaf"
   },
   {
-    "plantId": 6,
+    "id": 6,
     "plantName": "ZZ Plant",
     "category": "Low Light",
     "price": 25,
@@ -72,7 +72,7 @@
     "providerName": "Shade & Shine"
   },
   {
-    "plantId": 7,
+    "id": 7,
     "plantName": "Pothos",
     "category": "Low Light",
     "price": 18,
@@ -84,7 +84,7 @@
     "providerName": "Leafy Greens"
   },
   {
-    "plantId": 8,
+    "id": 8,
     "plantName": "Philodendron",
     "category": "Low Light",
     "price": 22,
@@ -96,7 +96,7 @@
     "providerName": "Tropical Treasures"
   },
   {
-    "plantId": 9,
+    "id": 9,
     "plantName": "Fiddle Leaf Fig",
     "category": "Statement",
     "price": 35,
@@ -108,7 +108,7 @@
     "providerName": "Designer's Choice"
   },
   {
-    "plantId": 10,
+    "id": 10,
     "plantName": "Monstera Deliciosa",
     "category": "Statement",
     "price": 30,
@@ -120,7 +120,7 @@
     "providerName": "Jungle Vibes"
   },
   {
-    "plantId": 11,
+    "id": 11,
     "plantName": "Rubber Plant",
     "category": "Statement",
     "price": 28,
@@ -132,7 +132,7 @@
     "providerName": "Urban Oasis"
   },
   {
-    "plantId": 12,
+    "id": 12,
     "plantName": "Dracaena",
     "category": "Low Light",
     "price": 20,

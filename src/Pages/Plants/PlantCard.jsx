@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const PlantCard = ({ plant }) => {
   const {
@@ -12,39 +13,34 @@ const PlantCard = ({ plant }) => {
     careLevel,
   } = plant;
 
-  // Limit description to 10 words
   const shortedDescription =
     description.split(" ").slice(0, 10).join(" ") +
     (description.split(" ").length > 10 ? "..." : "");
 
-  // Generate star rating
   const totalStars = 5;
   const filledStars = Math.round(rating);
   const stars = Array.from({ length: totalStars }, (_, i) =>
     i < filledStars ? "★" : "☆"
   ).join("");
 
-  // Badge color based on care level
   const careBadgeColor =
     careLevel === "Easy"
       ? "bg-green-500"
       : careLevel === "Moderate"
       ? "bg-yellow-400"
-      : "bg-red-500"; // default fallback for future "Hard" etc.
+      : "bg-red-500";
 
   return (
     <div className="card bg-base-100 shadow-sm p-2 space-y-3 group hover:shadow-lg transition-shadow duration-300">
-      {/* Image Container */}
       <div className="relative overflow-hidden rounded-t-lg">
         <figure>
           <img
             src={image}
             alt={plantName}
-            className="h-[600px] w-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+            className="h-[300px] lg:h-[550px] w-full object-cover transform transition-transform duration-500 group-hover:scale-105"
           />
         </figure>
 
-        {/* Care Level Badge */}
         <div className="absolute top-3 right-3">
           <div
             className={`badge ${careBadgeColor} text-white px-3 py-2 shadow-md border-0 transition-transform duration-300 hover:scale-110 hover:brightness-110`}
@@ -54,7 +50,6 @@ const PlantCard = ({ plant }) => {
         </div>
       </div>
 
-      {/* Card Content */}
       <div className="card-body">
         <h2 className="card-title text-2xl">{plantName}</h2>
 
@@ -89,9 +84,12 @@ const PlantCard = ({ plant }) => {
         </p>
 
         <div>
-          <button className="btn btn-primary w-full mt-3 transition-transform duration-300 hover:scale-[1.03]">
+          <Link
+            to={`/plantDetails/${plant.id}`}
+            className="btn btn-primary w-full mt-3 transition-transform duration-300 hover:scale-[1.03]"
+          >
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>

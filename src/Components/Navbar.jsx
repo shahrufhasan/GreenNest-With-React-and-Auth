@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router";
 import logo from "../../public/logo.png";
 
@@ -9,18 +9,20 @@ const Navbar = () => {
     { name: "My Profile", path: "/profile" },
   ];
 
-  const [activePath, setActivePath] = useState("/");
+  const [activePath, setActivePath] = useState(window.location.pathname);
 
-  const handleClick = (path) => {
-    setActivePath(path);
-  };
+  useEffect(() => {
+    const handlePopState = () => setActivePath(window.location.pathname);
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   const renderLinks = () =>
     navItems.map((item) => (
       <li key={item.path}>
         <Link
           to={item.path}
-          onClick={() => handleClick(item.path)}
+          onClick={() => setActivePath(item.path)}
           className={`block px-3 mx-1 py-2 rounded ${
             activePath === item.path ? "bg-primary text-white" : ""
           }`}
