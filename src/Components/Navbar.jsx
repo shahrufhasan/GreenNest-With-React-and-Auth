@@ -69,7 +69,12 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        <a className="btn btn-outline btn-secondary">Login</a>
+        <Link to="/auth/login" className=" ">
+          <a className="btn btn-outline btn-secondary">Login</a>
+        </Link>
+        <Link to="/auth/register" className="">
+          <a className="btn btn-outline btn-primary">Register</a>
+        </Link>
       </div>
     </div>
   );

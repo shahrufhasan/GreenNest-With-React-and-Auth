@@ -4,6 +4,9 @@ import Profile from "../Pages/Profile/Profile";
 import Home from "../Pages/Home/Home";
 import Plants from "../Pages/Plants/Plants";
 import PlantDetails from "../Pages/Plants/PlantDetails";
+import Login from "../Auth/Login";
+import Register from "../Auth/Register";
+import AuthLayout from "../Layouts/AuthLayout";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +28,20 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile></Profile>,
+      },
+    ],
+  },
+  {
+    path: "/auth",
+    element: <AuthLayout></AuthLayout>,
+    children: [
+      {
+        path: "/auth/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/auth/register",
+        element: <Register></Register>,
       },
     ],
   },
