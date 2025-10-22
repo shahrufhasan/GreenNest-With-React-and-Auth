@@ -7,9 +7,8 @@
     "rating": 4.8,
     "availableStock": 10,
     "careLevel": "Easy",
-    "description": "A hardy plant that purifies indoor air and thrives in low light.",
+    "description": "The Snake Plant is a hardy and striking houseplant known for its upright sword-like leaves with vibrant green and yellow patterns. It is one of the best air-purifying plants, removing toxins and improving indoor air quality. Thriving in low light and requiring minimal water, it’s ideal for beginners and busy households.",
     "image": "https://i.ibb.co/DH9z473Y/sarah-bronske-r-Gp-Z6-RKef-XU-unsplash.jpg",
-
     "providerName": "UrbanGreen Studio"
   },
   {
@@ -20,7 +19,7 @@
     "rating": 4.7,
     "availableStock": 8,
     "careLevel": "Easy",
-    "description": "Known for its air-purifying qualities and easy care.",
+    "description": "The Spider Plant is an adaptable, fast-growing indoor plant admired for its arching green-and-white striped leaves. It effectively cleans indoor air by absorbing harmful pollutants, making it perfect for homes and offices. This low-maintenance beauty grows baby offshoots, is non-toxic to pets, and thrives in indirect light with moderate watering.",
     "image": "https://i.ibb.co/0jhybcMh/feey-Rt-H6r-Y9k738-unsplash.jpg",
     "providerName": "GreenThumb Nursery"
   },
@@ -32,7 +31,7 @@
     "rating": 4.9,
     "availableStock": 12,
     "careLevel": "Moderate",
-    "description": "Elegant white blooms and excellent air-purifying abilities.",
+    "description": "The Peace Lily features graceful white blooms that contrast beautifully against its deep green leaves. Renowned for purifying indoor air, it filters out toxins and improves humidity. Peace Lilies thrive in shaded spaces and need regular watering to maintain their lush appearance, offering both elegance and natural freshness indoors.",
     "image": "https://i.ibb.co/rfMT3fZ2/feey-lmcz-Pem-Wj-QQ-unsplash.jpg",
     "providerName": "Bloom & Grow"
   },
@@ -44,7 +43,7 @@
     "rating": 4.6,
     "availableStock": 15,
     "careLevel": "Easy",
-    "description": "Succulent plant known for its healing properties.",
+    "description": "Aloe Vera is a popular succulent prized for its soothing gel used in skincare and healing minor burns. Its plump, fleshy leaves store water, making it highly drought-resistant and easy to care for. Preferring bright light and minimal watering, Aloe Vera doubles as a decorative and medicinal household essential.",
     "image": "https://i.ibb.co/q3nXxWdY/stephanie-harvey-T0inbt7n-RME-unsplash.jpg",
     "providerName": "Herb Haven"
   },
@@ -56,7 +55,7 @@
     "rating": 4.5,
     "availableStock": 20,
     "careLevel": "Moderate",
-    "description": "Climbing vine that purifies air and adds greenery.",
+    "description": "English Ivy is a classic climbing vine celebrated for its lush green leaves and ability to filter airborne toxins. Perfect for hanging baskets or decorative trellises, it brings timeless charm to any space. It thrives in bright, indirect light and cool environments, adding elegance while improving indoor air quality.",
     "image": "https://i.ibb.co/8DZHBD6p/jerry-wang-8-Da7-Sg-PKGC8-unsplash.jpg",
     "providerName": "Vine & Leaf"
   },
@@ -68,7 +67,7 @@
     "rating": 4.8,
     "availableStock": 5,
     "careLevel": "Easy",
-    "description": "Tolerant of low light and neglectful watering.",
+    "description": "The ZZ Plant is a tough, resilient favorite for low-light spaces. Its glossy, dark green leaves store water in their rhizomes, allowing it to survive long periods without attention. Known for its sleek, modern look, the ZZ Plant thrives on neglect, purifying air and adding a stylish touch anywhere.",
     "image": "https://i.ibb.co/DHf7FQsx/feey-1gwj-E0c3-PSQ-unsplash.jpg",
     "providerName": "Shade & Shine"
   },
@@ -80,7 +79,7 @@
     "rating": 4.7,
     "availableStock": 18,
     "careLevel": "Easy",
-    "description": "Trailing vine that thrives in low light conditions.",
+    "description": "Pothos, often called Devil’s Ivy, is a popular trailing vine with heart-shaped green or variegated leaves. It thrives in low light and requires minimal care, making it ideal for beginners. Known for its air-purifying qualities, Pothos grows quickly, adapting to both soil and water, and brings natural beauty to interiors.",
     "image": "https://i.ibb.co/2BMzSb7/zinah-insignia-Lv6x-TKbzh-M4-unsplash.jpg",
     "providerName": "Leafy Greens"
   },
@@ -92,7 +91,7 @@
     "rating": 4.6,
     "availableStock": 10,
     "careLevel": "Moderate",
-    "description": "Heart-shaped leaves add a touch of elegance.",
+    "description": "Philodendrons are tropical houseplants for their large, glossy, heart-shaped leaves that add lush greenery indoors. They adapt well to low light and moderate watering schedules. Their graceful vines can trail or climb, making them perfect for shelves or hanging planters. They bring warmth, freshness, and tropical charm to interiors.",
     "image": "https://i.ibb.co/jZPqMQ7H/feey-ajg-VAG2-Ky-QQ-unsplash.jpg",
     "providerName": "Tropical Treasures"
   },
@@ -104,7 +103,7 @@
     "rating": 4.4,
     "availableStock": 6,
     "careLevel": "Moderate",
-    "description": "Large, glossy leaves make a bold statement.",
+    "description": "The Fiddle Leaf Fig is a bold indoor statement plant with broad, violin-shaped leaves that instantly elevate any room’s decor. It thrives in bright, indirect light and needs consistent watering. With its modern, architectural form, this plant brings sophistication and a fresh, tropical atmosphere to homes and offices alike.",
     "image": "https://i.ibb.co/jv7RSDNd/kara-eads-Eb-LX7o-Ro4v-I-unsplash.jpg",
     "providerName": "Designer's Choice"
   },
@@ -116,7 +115,7 @@
     "rating": 4.8,
     "availableStock": 8,
     "careLevel": "Moderate",
-    "description": "Distinctive split leaves add a tropical flair.",
+    "description": "Monstera Deliciosa, also known as the Swiss Cheese Plant, is famous for its iconic split leaves and tropical appeal. It thrives in bright, indirect light and benefits from occasional misting. This plant grows vigorously, making it a striking centerpiece that brings jungle vibes and lush energy into any living space.",
     "image": "https://i.ibb.co/NgxDnWbT/feey-bws-TJMnhcw-E-unsplash-1.jpg",
     "providerName": "Jungle Vibes"
   },
@@ -128,7 +127,7 @@
     "rating": 4.5,
     "availableStock": 7,
     "careLevel": "Moderate",
-    "description": "Shiny, dark green leaves add sophistication.",
+    "description": "The Rubber Plant is known for its shiny, deep green leaves that create a sophisticated, contemporary aesthetic. It purifies air effectively and thrives in bright, filtered light. With minimal watering and proper drainage, it grows tall and sturdy, adding bold structure and timeless beauty to modern homes or workspaces.",
     "image": "https://i.ibb.co/7xzGhTS4/denley-photography-GNd-Lc38z-Nj-U-unsplash.jpg",
     "providerName": "Urban Oasis"
   },
@@ -140,7 +139,7 @@
     "rating": 4.6,
     "availableStock": 10,
     "careLevel": "Moderate",
-    "description": "Graceful foliage adds a touch of elegance.",
+    "description": "Dracaena plants feature long, narrow leaves that give a graceful, tropical appearance to any indoor setting. They are tolerant of low light and irregular watering, making them a resilient choice for homes and offices. Dracaenas purify indoor air while adding height, color, and sophistication to both modern and classic interiors.",
     "image": "https://i.ibb.co/rfMT3fZ2/feey-lmcz-Pem-Wj-QQ-unsplash.jpg",
     "providerName": "Leaf & Root"
   }

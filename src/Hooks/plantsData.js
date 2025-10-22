@@ -1,17 +1,19 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const plantsData = () => {
+const usePlantsData = () => {
   const [plants, setPlants] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios("../plantsData.json")
-      .then((data) => setPlants(data.data))
-      .catch((error) => {
-        console.log(error);
-      });
+    axios("/plantsData.json")
+      .then((response) => setPlants(response.data))
+      .catch((err) => setError(err))
+      .finally(() => setLoading(false));
   }, []);
-  return { plants };
+
+  return { plants, loading, error };
 };
 
-export default plantsData;
+export default usePlantsData;
