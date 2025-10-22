@@ -1,0 +1,147 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "A hardy plant that purifies indoor air and thrives in low light.",
+    "image": "https://i.ibb.co/DH9z473Y/sarah-bronske-r-Gp-Z6-RKef-XU-unsplash.jpg",
+
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Spider Plant",
+    "category": "Air Purifier",
+    "price": 15,
+    "rating": 4.7,
+    "availableStock": 8,
+    "careLevel": "Easy",
+    "description": "Known for its air-purifying qualities and easy care.",
+    "image": "https://i.ibb.co/0jhybcMh/feey-Rt-H6r-Y9k738-unsplash.jpg",
+    "providerName": "GreenThumb Nursery"
+  },
+  {
+    "plantId": 3,
+    "plantName": "Peace Lily",
+    "category": "Air Purifier",
+    "price": 20,
+    "rating": 4.9,
+    "availableStock": 12,
+    "careLevel": "Moderate",
+    "description": "Elegant white blooms and excellent air-purifying abilities.",
+    "image": "https://i.ibb.co/rfMT3fZ2/feey-lmcz-Pem-Wj-QQ-unsplash.jpg",
+    "providerName": "Bloom & Grow"
+  },
+  {
+    "plantId": 4,
+    "plantName": "Aloe Vera",
+    "category": "Medicinal",
+    "price": 12,
+    "rating": 4.6,
+    "availableStock": 15,
+    "careLevel": "Easy",
+    "description": "Succulent plant known for its healing properties.",
+    "image": "https://i.ibb.co/q3nXxWdY/stephanie-harvey-T0inbt7n-RME-unsplash.jpg",
+    "providerName": "Herb Haven"
+  },
+  {
+    "plantId": 5,
+    "plantName": "English Ivy",
+    "category": "Air Purifier",
+    "price": 10,
+    "rating": 4.5,
+    "availableStock": 20,
+    "careLevel": "Moderate",
+    "description": "Climbing vine that purifies air and adds greenery.",
+    "image": "https://i.ibb.co/8DZHBD6p/jerry-wang-8-Da7-Sg-PKGC8-unsplash.jpg",
+    "providerName": "Vine & Leaf"
+  },
+  {
+    "plantId": 6,
+    "plantName": "ZZ Plant",
+    "category": "Low Light",
+    "price": 25,
+    "rating": 4.8,
+    "availableStock": 5,
+    "careLevel": "Easy",
+    "description": "Tolerant of low light and neglectful watering.",
+    "image": "https://i.ibb.co/DHf7FQsx/feey-1gwj-E0c3-PSQ-unsplash.jpg",
+    "providerName": "Shade & Shine"
+  },
+  {
+    "plantId": 7,
+    "plantName": "Pothos",
+    "category": "Low Light",
+    "price": 18,
+    "rating": 4.7,
+    "availableStock": 18,
+    "careLevel": "Easy",
+    "description": "Trailing vine that thrives in low light conditions.",
+    "image": "https://i.ibb.co/2BMzSb7/zinah-insignia-Lv6x-TKbzh-M4-unsplash.jpg",
+    "providerName": "Leafy Greens"
+  },
+  {
+    "plantId": 8,
+    "plantName": "Philodendron",
+    "category": "Low Light",
+    "price": 22,
+    "rating": 4.6,
+    "availableStock": 10,
+    "careLevel": "Moderate",
+    "description": "Heart-shaped leaves add a touch of elegance.",
+    "image": "https://i.ibb.co/jZPqMQ7H/feey-ajg-VAG2-Ky-QQ-unsplash.jpg",
+    "providerName": "Tropical Treasures"
+  },
+  {
+    "plantId": 9,
+    "plantName": "Fiddle Leaf Fig",
+    "category": "Statement",
+    "price": 35,
+    "rating": 4.4,
+    "availableStock": 6,
+    "careLevel": "Moderate",
+    "description": "Large, glossy leaves make a bold statement.",
+    "image": "https://i.ibb.co/jv7RSDNd/kara-eads-Eb-LX7o-Ro4v-I-unsplash.jpg",
+    "providerName": "Designer's Choice"
+  },
+  {
+    "plantId": 10,
+    "plantName": "Monstera Deliciosa",
+    "category": "Statement",
+    "price": 30,
+    "rating": 4.8,
+    "availableStock": 8,
+    "careLevel": "Moderate",
+    "description": "Distinctive split leaves add a tropical flair.",
+    "image": "https://i.ibb.co/NgxDnWbT/feey-bws-TJMnhcw-E-unsplash-1.jpg",
+    "providerName": "Jungle Vibes"
+  },
+  {
+    "plantId": 11,
+    "plantName": "Rubber Plant",
+    "category": "Statement",
+    "price": 28,
+    "rating": 4.5,
+    "availableStock": 7,
+    "careLevel": "Moderate",
+    "description": "Shiny, dark green leaves add sophistication.",
+    "image": "https://i.ibb.co/7xzGhTS4/denley-photography-GNd-Lc38z-Nj-U-unsplash.jpg",
+    "providerName": "Urban Oasis"
+  },
+  {
+    "plantId": 12,
+    "plantName": "Dracaena",
+    "category": "Low Light",
+    "price": 20,
+    "rating": 4.6,
+    "availableStock": 10,
+    "careLevel": "Moderate",
+    "description": "Graceful foliage adds a touch of elegance.",
+    "image": "https://i.ibb.co/rfMT3fZ2/feey-lmcz-Pem-Wj-QQ-unsplash.jpg",
+    "providerName": "Leaf & Root"
+  }
+]
