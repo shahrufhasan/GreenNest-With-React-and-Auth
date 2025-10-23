@@ -7,7 +7,6 @@ const Register = () => {
   const { createUser, setUser, updateUser, signInWithGoogle } =
     use(AuthContext);
   const [nameError, setNameError] = useState("");
-
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -16,8 +15,8 @@ const Register = () => {
     const form = event.target;
     const name = form.name.value;
 
-    if (name.length < 6) {
-      setNameError("Name should be at least 6 characters");
+    if (name.length < 5) {
+      setNameError("Name should be at least 5 characters");
       return;
     } else {
       setNameError("");

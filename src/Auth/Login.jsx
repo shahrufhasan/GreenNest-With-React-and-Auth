@@ -27,16 +27,13 @@ const Login = () => {
   const handleGoogleLogin = () => {
     signInWithGoogle()
       .then(async (result) => {
-        // Check if the user is new
         const isNewUser = result._tokenResponse?.isNewUser;
         if (isNewUser) {
-          // If the user is new, log them out and show alert
           await logOut();
           alert(
             "This Google account is not registered. Please register first."
           );
         } else {
-          // Existing Google user, log in normally
           setUser(result.user);
           navigate(location.state ? location.state : "/");
         }

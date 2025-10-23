@@ -11,7 +11,7 @@ const Team = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-        <div className="card bg-base-100  shadow-sm text-center hover:scale-105 transition-all duration-300">
+        <div className="card bg-base-100  shadow-sm text-center hover:scale-102 transition-all duration-300">
           <figure>
             <img
               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400"
@@ -23,11 +23,13 @@ const Team = () => {
             <h2 className="text-center text-2xl font-semibold">Emma Green</h2>
             <p className="text-primary">Tropical Plants Specialist</p>
             <div>
-              <button className="btn btn-secondary w-full">Contact</button>
+              <button className="btn btn-secondary btn-outline w-full">
+                Contact
+              </button>
             </div>
           </div>
         </div>
-        <div className="card bg-base-100  shadow-sm text-center hover:scale-105 transition-all duration-300">
+        <div className="card bg-base-100  shadow-sm text-center hover:scale-102 transition-all duration-300">
           <figure>
             <img
               src="https://i.ibb.co/DHsfd8Qh/467444869-10160351769061891-3964624160658220491-n.jpg"
@@ -41,11 +43,13 @@ const Team = () => {
             </h2>
             <p className="text-primary">CEO & Urban Gardening Expert</p>
             <div>
-              <button className="btn btn-secondary w-full">Contact</button>
+              <button className="btn btn-secondary btn-outline w-full">
+                Contact
+              </button>
             </div>
           </div>
         </div>
-        <div className="card bg-base-100  shadow-sm text-center hover:scale-105 transition-all duration-300">
+        <div className="card bg-base-100  shadow-sm text-center hover:scale-102 transition-all duration-300">
           <figure>
             <img
               src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=774"
@@ -57,7 +61,9 @@ const Team = () => {
             <h2 className="text-center text-2xl font-semibold">Mark Gates</h2>
             <p className="text-primary">Tropical Plants Specialist</p>
             <div>
-              <button className="btn btn-secondary w-full">Contact</button>
+              <button className="btn btn-outline btn-secondary w-full">
+                Contact
+              </button>
             </div>
           </div>
         </div>
