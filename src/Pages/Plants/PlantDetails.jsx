@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import usePlantsData from "../../Hooks/usePlantsData";
 
 const PlantDetails = () => {
@@ -35,7 +35,10 @@ const PlantDetails = () => {
       />
 
       <h1 className="text-3xl font-bold mb-3">{plantName}</h1>
-      <p className="text-gray-700 mb-3">{description}</p>
+      <p className="text-gray-600 mb-3">
+        Description:
+        <span className="text-primary"> {description}</span>
+      </p>
       <p className="font-medium mb-2">Category: {category}</p>
       <p className="font-medium mb-2">Care Level: {careLevel}</p>
       <p className="font-medium mb-2 ">
@@ -44,6 +47,9 @@ const PlantDetails = () => {
       <h2 className="text-2xl font-bold  mt-4">
         Price: <span className="text-green-700">${price}</span>
       </h2>
+      <Link className="btn btn-primary px-5 mt-8" to="/plants">
+        See All Plants
+      </Link>
     </div>
   );
 };

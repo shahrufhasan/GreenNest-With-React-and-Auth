@@ -1,13 +1,25 @@
-import React, { use } from "react";
-import { Link } from "react-router";
+import React, { use, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthContex";
 
 const Register = () => {
   const { createUser, setUser } = use(AuthContext);
+
+  const [nameError, setNameError] = useState("");
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
+    if (nameError.length < 6) {
+      setNameError("Name should be at least 6 characters");
+      return;
+    } else {
+      setNameError("");
+    }
     const email = form.email.value;
     const photo = form.photo.value;
     const password = form.password.value;
@@ -17,6 +29,7 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -43,6 +56,7 @@ const Register = () => {
               placeholder="Name"
               required
             />
+            {nameError && <p className="text-red-500">{nameError}</p>}
             {/* email */}
             <label className="label">Email</label>
             <input

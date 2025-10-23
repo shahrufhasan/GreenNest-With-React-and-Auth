@@ -4,9 +4,15 @@ import logo from "../../public/logo.png";
 import { AuthContext } from "../Provider/AuthContex";
 
 const Navbar = () => {
-  const { user } = use(AuthContext);
+  const { user, logOut } = use(AuthContext);
   const handleLogOut = () => {
-    console.log("trying log out");
+    logOut()
+      .then(() => {
+        alert("Logged Out");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   // Naviagatins system starts from here
