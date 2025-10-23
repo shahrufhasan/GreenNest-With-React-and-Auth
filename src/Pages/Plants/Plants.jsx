@@ -8,7 +8,7 @@ const Plants = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-5">
       {plants.map((plant) => (
-        <PlantCard plant={plant}></PlantCard>
+        <PlantCard key={plant.id} plant={plant}></PlantCard>
       ))}
     </div>
   );
