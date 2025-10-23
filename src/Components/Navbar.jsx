@@ -4,18 +4,21 @@ import logo from "../../public/logo.png";
 import { AuthContext } from "../Provider/AuthContex";
 
 const Navbar = () => {
-  const { user, logOut } = use(AuthContext);
+  const authData = use(AuthContext);
+  const { user: contextUser, logOut } = authData;
+
+  const [user, setUser] = useState(contextUser);
+
+  useEffect(() => {
+    setUser(contextUser);
+  }, [contextUser]);
+
   const handleLogOut = () => {
     logOut()
-      .then(() => {
-        alert("Logged Out");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .then(() => alert("Logged Out"))
+      .catch((err) => console.log(err));
   };
 
-  // Naviagatins system starts from here
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Plants", path: "/plants" },
@@ -46,7 +49,7 @@ const Navbar = () => {
     ));
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm px-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -67,7 +70,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-lg"
           >
             {renderLinks()}
           </ul>
@@ -81,41 +84,45 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{renderLinks()}</ul>
       </div>
 
-      <div className="navbar-end">
+      <div className="navbar-end relative">
         {user ? (
-          <div className="dropdown dropdown-hover mr-2">
-            <div tabIndex={0} role="button">
+          <div className="relative dropdown">
+            <div tabIndex={0} role="button" className="cursor-pointer">
               <div className="avatar">
-                <div className="ring-offset-base-100 w-10 rounded-full ">
-                  <img src={`${user ? user.photoURL : " "}`} />
+                <div className="w-10 rounded-full ring ring-primary ring-offset-base-100">
+                  <img
+                    src={user.photoURL || "/default-avatar.png"}
+                    alt={user.displayName || "User"}
+                  />
                 </div>
               </div>
             </div>
-            <ul
-              tabIndex="-1"
-              className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-            >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Item 2</a>
-              </li>
-            </ul>
+
+            {/* Dropdown content */}
+            <div className="dropdown-content   absolute right-0 top-12 bg-base-100 shadow-lg rounded-lg w-48 p-3 flex flex-col z-50">
+              <span className="font-semibold mb-2 truncate">
+                {user.displayName || "User"}
+              </span>
+              <button
+                onClick={handleLogOut}
+                className="btn btn-outline btn-primary w-full"
+              >
+                Log Out
+              </button>
+            </div>
           </div>
         ) : (
-          <Link to="/auth/login" className="btn btn-outline btn-secondary mx-2">
-            Login
-          </Link>
-        )}
-        {user ? (
-          <button onClick={handleLogOut} className="btn">
-            LogOut
-          </button>
-        ) : (
-          <Link to="/auth/register" className="btn btn-outline btn-primary">
-            Register
-          </Link>
+          <>
+            <Link
+              to="/auth/login"
+              className="btn btn-outline btn-secondary mx-2"
+            >
+              Login
+            </Link>
+            <Link to="/auth/register" className="btn btn-outline btn-primary">
+              Register
+            </Link>
+          </>
         )}
       </div>
     </div>
