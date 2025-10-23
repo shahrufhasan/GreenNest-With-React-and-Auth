@@ -1,6 +1,7 @@
 import React, { use, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthContex";
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
   const { createUser, setUser, updateUser } = use(AuthContext);
@@ -101,7 +102,11 @@ const Register = () => {
             <div className="my-2 text-center">
               <p>OR CONTINUE WITH</p>
             </div>
-            <button className="btn">Continue With Google</button>
+            <button className="btn">
+              {" "}
+              <FcGoogle />
+              Continue With Google
+            </button>
             <p className="text-center mt-2 flex items-center justify-center">
               Aready Have An Account?{" "}
               <Link to="/auth/login" className="text-primary px-1">

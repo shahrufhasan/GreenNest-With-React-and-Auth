@@ -51,7 +51,7 @@ const PlantCard = ({ plant }) => {
       </div>
 
       <div className="card-body">
-        <h2 className="card-title text-2xl">{plantName}</h2>
+        <h2 className="card-title text-3xl">{plantName}</h2>
 
         <div className="flex justify-between items-center">
           <div className="badge bg-green-200 transition-transform duration-300 hover:scale-110 hover:brightness-110">
@@ -65,16 +65,22 @@ const PlantCard = ({ plant }) => {
 
         <div className="flex justify-between items-center">
           <div>
-            <h4 className="text-xl">
-              Price: <span className="font-bold">${price}</span>
+            <h4 className="text-lg">
+              Price:{" "}
+              <span className="font-bold">
+                <span className="text-primary">${price}</span>
+              </span>
             </h4>
           </div>
           <div>
-            <p>Available: {availableStock}</p>
+            <p>
+              Available:{" "}
+              <span className="text-secondary">{availableStock}</span>
+            </p>
           </div>
         </div>
 
-        <p className="text-gray-600">
+        <p className="text-primary">
           {shortedDescription}{" "}
           {description.split(" ").length > 10 && (
             <span className="underline cursor-pointer hover:text-blue-700">
