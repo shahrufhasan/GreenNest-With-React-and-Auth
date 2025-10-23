@@ -1,19 +1,20 @@
 [
   {
     "id": 1,
-    "plantName": "Snake Plant",
-    "category": "Air Purifier",
-    "price": 18,
-    "rating": 4.8,
-    "availableStock": 10,
+    "plantName": "Aloe Vera",
+    "category": "Medicinal",
+    "price": 12,
+    "rating": 4.6,
+    "availableStock": 15,
     "careLevel": "Easy",
-    "description": "The Snake Plant is a hardy and striking houseplant known for its upright sword-like leaves with vibrant green and yellow patterns. It is one of the best air-purifying plants, removing toxins and improving indoor air quality. Thriving in low light and requiring minimal water, it’s ideal for beginners and busy households.",
-    "image": "https://i.ibb.co/DH9z473Y/sarah-bronske-r-Gp-Z6-RKef-XU-unsplash.jpg",
-    "providerName": "UrbanGreen Studio",
-    "watering": "Water lightly every 2–3 weeks; allow soil to dry out completely between waterings.",
-    "sunlight": "Low to bright indirect light; tolerates low light conditions.",
-    "fertilizing": "Feed with a balanced liquid fertilizer once every 2–3 months during growing season."
+    "description": "Aloe Vera is a popular succulent prized for its soothing gel used in skincare and healing minor burns. Its plump, fleshy leaves store water, making it highly drought-resistant and easy to care for. Preferring bright light and minimal watering, Aloe Vera doubles as a decorative and medicinal household essential.",
+    "image": "https://i.ibb.co/q3nXxWdY/stephanie-harvey-T0inbt7n-RME-unsplash.jpg",
+    "providerName": "Herb Haven",
+    "watering": "Water deeply every 3 weeks or when soil is completely dry.",
+    "sunlight": "Bright, indirect sunlight; can tolerate direct sun for a few hours.",
+    "fertilizing": "Feed once every 2 months with succulent-specific fertilizer."
   },
+
   {
     "id": 2,
     "plantName": "Spider Plant",
@@ -46,18 +47,18 @@
   },
   {
     "id": 4,
-    "plantName": "Aloe Vera",
-    "category": "Medicinal",
-    "price": 12,
-    "rating": 4.6,
-    "availableStock": 15,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
     "careLevel": "Easy",
-    "description": "Aloe Vera is a popular succulent prized for its soothing gel used in skincare and healing minor burns. Its plump, fleshy leaves store water, making it highly drought-resistant and easy to care for. Preferring bright light and minimal watering, Aloe Vera doubles as a decorative and medicinal household essential.",
-    "image": "https://i.ibb.co/q3nXxWdY/stephanie-harvey-T0inbt7n-RME-unsplash.jpg",
-    "providerName": "Herb Haven",
-    "watering": "Water deeply every 3 weeks or when soil is completely dry.",
-    "sunlight": "Bright, indirect sunlight; can tolerate direct sun for a few hours.",
-    "fertilizing": "Feed once every 2 months with succulent-specific fertilizer."
+    "description": "The Snake Plant is a hardy and striking houseplant known for its upright sword-like leaves with vibrant green and yellow patterns. It is one of the best air-purifying plants, removing toxins and improving indoor air quality. Thriving in low light and requiring minimal water, it’s ideal for beginners and busy households.",
+    "image": "https://i.ibb.co/DH9z473Y/sarah-bronske-r-Gp-Z6-RKef-XU-unsplash.jpg",
+    "providerName": "UrbanGreen Studio",
+    "watering": "Water lightly every 2–3 weeks; allow soil to dry out completely between waterings.",
+    "sunlight": "Low to bright indirect light; tolerates low light conditions.",
+    "fertilizing": "Feed with a balanced liquid fertilizer once every 2–3 months during growing season."
   },
   {
     "id": 5,

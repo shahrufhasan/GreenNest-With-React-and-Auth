@@ -12,7 +12,10 @@ const TopPlants = () => {
           Discover our most loved plants, perfect for any places
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-4 md:py-8 lg:py-12 gap-5">
+      <div
+        className=" w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 
+        lg:grid-cols-3 py-4 md:py-8 lg:py-12 gap-5"
+      >
         {topPlants.map((plant) => (
           <PlantCard key={plant.id} plant={plant}></PlantCard>
         ))}

@@ -10,11 +10,7 @@ const PlantDetails = () => {
   }
 
   if (error) {
-    return (
-      <p className="text-center mt-10 text-red-500">
-        Error loading plant data.
-      </p>
-    );
+    return error.code;
   }
 
   const plant = plants.find((p) => String(p.id) === String(id));
