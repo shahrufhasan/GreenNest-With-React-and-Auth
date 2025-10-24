@@ -1,36 +1,47 @@
-import React, { useState, use } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthContex";
 import { FcGoogle } from "react-icons/fc";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const { signIn, signInWithGoogle, setUser, logOut } = use(AuthContext);
+  const { signIn, signInWithGoogle, setUser, logOut, resetPassword } =
+    useContext(AuthContext);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const [forgotEmail, setForgotEmail] = useState("");
+  const [showForgot, setShowForgot] = useState(false);
 
   const location = useLocation();
   const navigate = useNavigate();
 
   const handleLogin = (event) => {
     event.preventDefault();
+    setError("");
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
 
+    setLoading(true);
     signIn(email, password)
       .then((result) => {
         setUser(result.user);
         navigate(location.state ? location.state : "/");
       })
-      .catch((error) => setError(error.code));
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
   };
 
   const handleGoogleLogin = () => {
+    setError("");
     signInWithGoogle()
-      .then(async (result) => {
+      .then((result) => {
         const isNewUser = result._tokenResponse?.isNewUser;
         if (isNewUser) {
-          await logOut();
-          alert(
+          logOut();
+          toast.error(
             "This Google account is not registered. Please register first."
           );
         } else {
@@ -38,7 +49,18 @@ const Login = () => {
           navigate(location.state ? location.state : "/");
         }
       })
-      .catch((error) => setError(error.message));
+      .catch((err) => setError(err.message));
+  };
+
+  const handleForgotPassword = (event) => {
+    event.preventDefault();
+    if (!forgotEmail) {
+      toast.error("Please enter your email!");
+      return;
+    }
+    resetPassword(forgotEmail)
+      .then(() => toast.success("Password reset email sent!"))
+      .catch((err) => toast.error(err.message));
   };
 
   return (
@@ -51,49 +73,87 @@ const Login = () => {
           </p>
         </div>
 
-        <form onSubmit={handleLogin} className="card-body">
-          <label className="label">Email</label>
-          <input
-            name="email"
-            type="email"
-            className="input"
-            placeholder="Email"
-            required
-          />
+        {!showForgot ? (
+          <form onSubmit={handleLogin} className="card-body">
+            <label className="label">Email</label>
+            <input
+              name="email"
+              type="email"
+              className="input"
+              placeholder="Email"
+              required
+            />
 
-          <label className="label">Password</label>
-          <input
-            name="password"
-            type="password"
-            className="input"
-            placeholder="Password"
-            required
-          />
+            <label className="label">Password</label>
+            <input
+              name="password"
+              type="password"
+              className="input"
+              placeholder="Password"
+              required
+            />
 
-          {error && <p className="text-red-500 mt-2">{error}</p>}
+            <p
+              onClick={() => setShowForgot(true)}
+              className="text-sm text-red-500 cursor-pointer mt-1 hover:underline"
+            >
+              Forgot Password?
+            </p>
 
-          <button type="submit" className="btn btn-primary mt-4 w-full">
-            Login
-          </button>
+            {error && <p className="text-red-500 mt-2">{error}</p>}
 
-          <div className="my-2 text-center">OR CONTINUE WITH</div>
+            <button
+              type="submit"
+              className="btn btn-primary mt-4 w-full"
+              disabled={loading}
+            >
+              {loading ? "Logging in..." : "Login"}
+            </button>
 
-          <button
-            type="button"
-            onClick={handleGoogleLogin}
-            className="btn w-full flex items-center justify-center gap-2"
-          >
-            <FcGoogle /> Continue With Google
-          </button>
+            <div className="my-2 text-center">OR CONTINUE WITH</div>
 
-          <p className="text-center mt-2">
-            Don't have an account?{" "}
-            <Link to="/auth/register" className="text-primary px-1">
-              Register
-            </Link>
-          </p>
-        </form>
+            <button
+              type="button"
+              onClick={handleGoogleLogin}
+              className="btn w-full flex items-center justify-center gap-2"
+            >
+              <FcGoogle /> Continue With Google
+            </button>
+
+            <p className="text-center mt-2">
+              Don't have an account?{" "}
+              <Link to="/auth/register" className="text-primary px-1">
+                Register
+              </Link>
+            </p>
+          </form>
+        ) : (
+          <form onSubmit={handleForgotPassword} className="card-body">
+            <label className="label">Enter your email to reset password</label>
+            <input
+              type="email"
+              value={forgotEmail}
+              onChange={(e) => setForgotEmail(e.target.value)}
+              className="input"
+              placeholder="Email"
+              required
+            />
+
+            <button type="submit" className="btn btn-red mt-4 w-full">
+              Send Reset Email
+            </button>
+
+            <p
+              onClick={() => setShowForgot(false)}
+              className="text-sm text-primary cursor-pointer mt-2 hover:underline text-center"
+            >
+              Back to Login
+            </p>
+          </form>
+        )}
       </div>
+
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };

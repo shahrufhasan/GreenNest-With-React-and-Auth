@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router";
 import usePlantsData from "../../Hooks/usePlantsData";
 import Loading from "../Loading/Loading";
+import { toast, ToastContainer } from "react-toastify";
 
 const PlantDetails = () => {
   const { id } = useParams();
@@ -23,6 +24,13 @@ const PlantDetails = () => {
   const stars = Array.from({ length: totalStars }, (_, i) =>
     i < filledStars ? "★" : "☆"
   ).join("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    toast.success("Form Submitted Successfully");
+    event.target.reset();
+  };
+
   return (
     <div className="max-w-4xl mx-auto my-10 p-5 bg-white shadow-md rounded-xl">
       <img
@@ -53,7 +61,7 @@ const PlantDetails = () => {
           Book a Consultation
         </h2>
 
-        <form class="space-y-4">
+        <form onSubmit={handleSubmit} class="space-y-4">
           <div class="form-control w-full">
             <label class="label">
               <span class="label-text">Name</span>
@@ -113,6 +121,7 @@ const PlantDetails = () => {
           </div>
         </form>
       </div>
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };
