@@ -1,12 +1,13 @@
 import { Link, useParams } from "react-router";
 import usePlantsData from "../../Hooks/usePlantsData";
+import Loading from "../Loading/Loading";
 
 const PlantDetails = () => {
   const { id } = useParams();
   const { plants, loading, error } = usePlantsData();
 
   if (loading) {
-    return <p className="text-center mt-10">Loading...</p>;
+    return <Loading></Loading>;
   }
 
   if (error) {

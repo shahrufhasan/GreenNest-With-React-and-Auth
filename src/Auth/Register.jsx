@@ -42,7 +42,6 @@ const Register = () => {
   const handleGoogleRegister = () => {
     signInWithGoogle()
       .then((result) => {
-        // Google registration is allowed here
         const user = result.user;
         setUser(user);
         navigate(location.state ? location.state : "/");

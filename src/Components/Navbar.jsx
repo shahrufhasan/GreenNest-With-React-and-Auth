@@ -2,6 +2,8 @@ import React, { useState, useEffect, use } from "react";
 import { Link } from "react-router";
 import logo from "../../public/logo.png";
 import { AuthContext } from "../Provider/AuthContex";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
   const authData = use(AuthContext);
@@ -15,7 +17,9 @@ const Navbar = () => {
 
   const handleLogOut = () => {
     logOut()
-      .then(() => alert("Logged Out"))
+      .then(() => {
+        toast.error("Logged out successfully!");
+      })
       .catch((err) => console.log(err));
   };
 
@@ -98,7 +102,6 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Dropdown content */}
             <div className="dropdown-content   absolute right-0 top-12 bg-base-100 shadow-lg rounded-lg w-48 p-3 flex flex-col z-50">
               <span className="font-semibold mb-2 truncate">
                 {user.displayName || "User"}
@@ -125,6 +128,7 @@ const Navbar = () => {
           </>
         )}
       </div>
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };
