@@ -13,7 +13,7 @@ The app is fully responsive and designed to provide a smooth and modern shopping
 ---
 
 ## 🛠️ Main Technologies Used
-- **Frontend:** React, JavaScript, HTML5, CSS3  
+- **Frontend:** React, JavaScript, HTML5, Tailwind and Daisy Ui
 - **Authentication / Backend:** Firebase Auth  
 - **Hosting / Deployment:** Firebase Hosting  
 - **Other Tools:** Git, GitHub  
