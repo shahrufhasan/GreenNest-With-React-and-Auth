@@ -43,3 +43,8 @@ The app is fully responsive and designed to provide a smooth and modern shopping
 1. **Clone the repository**  
 ```bash
 git clone https://github.com/shahrufhasan/GreenNest-With-React-and-Auth.git
+cd GreenNest-With-React-and-Auth
+npm install
+MONGO_URI=your-mongodb-connection-string
+PORT=5000
+npm start
